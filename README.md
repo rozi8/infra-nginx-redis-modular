@@ -42,7 +42,7 @@ Struktur proyek dibuat modular agar mudah dikembangkan, dikelola, dan digunakan 
 
 ### Cara Penggunaan
 Clone repository:
-git clone https://github.com/rozi8/terraform-docker-nginx-redis.git
+git clone https://github.com/rozi8/infra-nginx-redis-modular
 cd terraform-docker-nginx-redis
 
 Duplikat file variabel contoh:
