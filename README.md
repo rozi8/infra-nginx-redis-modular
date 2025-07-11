@@ -13,18 +13,31 @@ Struktur proyek dibuat modular agar mudah dikembangkan, dikelola, dan digunakan 
 
 ## 📁 Struktur Direktori
 .
+
 ├── main.tf
+
 ├── modules
+
 │   └── redis
+
 │       ├── main.tf
+
 │       ├── output.tf
+
 │       ├── terraform.tfvars
+
 │       └── variables.tf
+
 ├── outputs.tf
+
 ├── README.md
+
 ├── terraform.tfstate
+
 ├── terraform.tfstate.backup
+
 ├── terraform.tfvars
+
 └── variable.tf
 
 ### Cara Penggunaan
@@ -44,7 +57,7 @@ terraform output
 Akses Nginx melalui browser:
 http://<ip-vm-ubuntu>:8087
 
-##👨‍💻 Tentang Penulis
+## 👨‍💻 Tentang Penulis
 Muhammad Fahrur Rozi
 Mahasiswa Informatika yang sedang mendalami dunia DevOps dan automasi infrastruktur.
 Project ini merupakan bagian dari proses belajar harian.
