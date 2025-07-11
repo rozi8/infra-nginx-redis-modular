@@ -1,33 +1,52 @@
-# 🚀 Terraform Nginx with Variables
+# 🚀 Deploy Nginx & Redis menggunakan Terraform dan Docker
 
-Mini project pembelajaran harian Terraform Fahru Rozi untuk menjalankan container Nginx menggunakan Docker provider secara dinamis dengan variable.
+Ini adalah mini proyek pembelajaran yang bertujuan untuk mengelola container **Nginx** dan **Redis** menggunakan **Terraform** dengan **Docker provider**.  
+Struktur proyek dibuat modular agar mudah dikembangkan, dikelola, dan digunakan ulang.
 
-## 📦 Fitur
+## 📌 Fitur Utama
 
-- Deploy container Nginx menggunakan Terraform
-- Gunakan variabel dinamis (`terraform.tfvars`)
-- Output informasi penting (container ID, IP, dan nama)
-- Struktur clean dan modular
+- Deployment container Nginx dan Redis secara otomatis
+- Menggunakan pendekatan modular untuk setiap layanan
+- Variabel input terpisah melalui `terraform.tfvars`
+- Menampilkan informasi penting setelah provisioning (`terraform output`)
+- Struktur direktori yang bersih dan terorganisir
 
-## 📁 Struktur File
+## 📁 Struktur Direktori
+.
+├── main.tf
+├── modules
+│   └── redis
+│       ├── main.tf
+│       ├── output.tf
+│       ├── terraform.tfvars
+│       └── variables.tf
+├── outputs.tf
+├── README.md
+├── terraform.tfstate
+├── terraform.tfstate.backup
+├── terraform.tfvars
+└── variable.tf
 
-├── main.tf # Deklarasi resource Docker image & container
-├── variables.tf # Deklarasi variabel input
-├── terraform.tfvars # Nilai variabel input
-├── outputs.tf # Output hasil provisioning
-├── README.md # Dokumentasi project
-└── .gitignore # File yang diabaikan Git
+### Cara Penggunaan
+Clone repository:
+git clone https://github.com/rozi8/terraform-docker-nginx-redis.git
+cd terraform-docker-nginx-redis
 
+Duplikat file variabel contoh:
+cp terraform.tfvars.example terraform.tfvars
 
-## ⚙️ Cara Menggunakan
-
-1. Inisialisasi terraform:
-
-``` bash
+Jalankan perintah Terraform:
 terraform init
 terraform plan
 terraform apply
 terraform output
 
-Setelah apply berhasil, buka di browser:
+Akses Nginx melalui browser:
 http://<ip-vm-ubuntu>:8087
+
+##👨‍💻 Tentang Penulis
+Muhammad Fahrur Rozi
+Mahasiswa Informatika yang sedang mendalami dunia DevOps dan automasi infrastruktur.
+Project ini merupakan bagian dari proses belajar harian.
+
+

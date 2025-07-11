@@ -11,6 +11,13 @@ provider "docker" {
  host = "unix:///var/run/docker.sock"
 }
 
+module "redis_server" {
+ source = "./modules/redis"
+ image_name = var.redis_image_name
+ container_name = var.redis_container_name
+ external_port = var.redis_external_port
+}
+
 resource "docker_image" "nginx" {
  name = var.image_name
 }

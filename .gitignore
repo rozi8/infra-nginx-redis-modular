@@ -1,16 +1,17 @@
-# Terraform files
 .terraform/
 *.tfstate
 *.tfstate.backup
-terraform.tfvars
+*.tfvars
 *.tfvars.json
 *.tfplan
 *.out
 *.log
 crash.log
 
-# Vim temporary files
 *.swp
 *.swo
 
+*~
 
+*.tmp
+*.bak
